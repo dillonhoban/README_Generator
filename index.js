@@ -1,6 +1,6 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
-const util = require('util');
+const generateMarkdown = require('./utils/generateMarkdown');
 
 // Array of questions for user
 const questions = [{
@@ -36,7 +36,7 @@ const questions = [{
     {
         type: 'list',
         name: 'license',
-        message: 'Please select a license for your README:',
+        message: 'Please select a license for your README (use arrow keys):',
         choices: ["MIT", "Apache 2.0", "GPL 3.0", "BSD 3", "None"],
     },
     {
